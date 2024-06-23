@@ -1,0 +1,21 @@
+To Study:
+
+Multi-threading, Concurrent Package and Concurrent APIs/Concurrent programming
+
+Caching mechanisms code
+Shadow & Deep cloning with code
+Design Patterns with code
+RDBMS or NoSQL databases and writing SQL queries, Cursors,Inner Outer JoIns, Group By , HavIng
+Stored Procedures, Triggers, Hibernate
+
+Cloud Tech like AWS Lambda/AWS EC2
+Apache kafka, java in use/java techie springboot program
+spring reactive web flux basics
+microservice design patterns
+
+Integration testing and Deployment pipelines like Kubernates/Docker
+Code quality tools like Sonarqube
+Performance/Load testing tools like Jmeter
+Time complexity
+
+
