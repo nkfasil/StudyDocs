@@ -16,6 +16,6 @@ microservice design patterns
 Integration testing and Deployment pipelines like Kubernates/Docker
 Code quality tools like Sonarqube
 Performance/Load testing tools like Jmeter
-Time complexity
+Time complexityies
 
 
