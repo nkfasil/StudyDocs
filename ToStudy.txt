@@ -6,10 +6,10 @@ Caching mechanisms code
 Shadow & Deep cloning with code
 Design Patterns with code
 RDBMS or NoSQL databases and writing SQL queries, Cursors,Inner Outer JoIns, Group By , HavIng
-Stored Procedures, Triggers, Hibernate
+Stored Procedures, Triggers, Index, Hibernate
 
 Cloud Tech like AWS Lambda/AWS EC2
-Apache kafka, java in use/java techie springboot program
+Apache kafka, java in use/java techie springboot program - consumer, consumer group, broker, topic, partition
 spring reactive web flux basics
 microservice design patterns
 
