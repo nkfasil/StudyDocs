@@ -18,4 +18,14 @@ Code quality tools like Sonarqubes
 Performance/Load testing tools like Jmeter
 Time complexityies
 
+cap, nfr microservice...
+ @autowired, jdbc design pattern, 
+ springboot java version compatibility, 
+ serialization final, atomic, static, transient..
+ this vs super powerful.. map collection mutable,
+ docker deploy, arraylist vs linkedlist for copying,
+ idempotent http requests, garbage details, spring stereotype component,
+ request body wrt http, preventing memory leak, stackoverflow,
+ scope of dependency, microservice load balancer, circular dependency spring
+
 
