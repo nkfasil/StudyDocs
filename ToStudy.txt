@@ -3,7 +3,7 @@ To Study:
 Multi-threading, Concurrent Package and Concurrent APIs/Concurrent programming
 
 Caching mechanisms code
-Shadow & Deep cloning with code
+Shallow & Deep cloning with code
 Design Patterns with code
 RDBMS or NoSQL databases and writing SQL queries, Cursors,Inner Outer JoIns, Group By , HavIng
 Stored Procedures, Triggers, Index, Hibernate
@@ -19,13 +19,12 @@ Performance/Load testing tools like Jmeter
 Time complexityies
 
 cap, nfr microservice...
- @autowired, jdbc design pattern, 
- springboot java version compatibility, 
+ @autowired, jdbc design pattern,  
  serialization final, atomic, static, transient..
  this vs super powerful.. map collection mutable,
  docker deploy, arraylist vs linkedlist for copying,
- idempotent http requests, garbage details, spring stereotype component,
+ idempotent http requests, garbage details,
  request body wrt http, preventing memory leak, stackoverflow,
- scope of dependency, microservice load balancer, circular dependency spring
+ , microservice load balancer
 
 
