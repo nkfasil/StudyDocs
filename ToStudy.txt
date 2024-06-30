@@ -9,7 +9,8 @@ RDBMS or NoSQL databases and writing SQL queries, Cursors,Inner Outer JoIns, Gro
 Stored Procedures, Triggers, Index, Hibernate
 
 Cloud Tech like AWS Lambda/AWS EC2
-Apache kafka, java in use/java techie springboot program - consumer, consumer group, broker, topic, partition
+Apache kafka, java in use/java techie springboot program - consumer, consumer group, broker, topic,
+ partition
 spring reactive web flux basics
 microservice design patterns
 
@@ -26,5 +27,24 @@ cap, nfr microservice...
  idempotent http requests, garbage details,
  request body wrt http, preventing memory leak, stackoverflow,
  , microservice load balancer
+ 
+ 
+ Hi, yes, thank you for having me today. My name is Fasil and I have 5.5 years of experience as a Java
+ backend developer. My most recent project was 'Agent Assist' for client 'Verizon'
+ Basically it was a simple agent facing chatbot application which the agent used to search terms based
+ on customer queries. The project was based on a Java 11 Springboot 2.7
+ microservice architecture. On the frontend, it consisted of GoogleDialogFlow for building 
+ conversational flows and Adobe AEM templates for customising the UI responses.
+ My day to day activities in my project included developing RESTful apis to build and maintain our
+ key components, implementing features in the required microservices based on the use cases, bug
+ fixing,  writing unit test cases using Junit and Mockito to ensure code quality, and also working on
+ the creation of Adobe AEM templates to assist at the frontend part.
+ 1 big challenge I faced was handling the legacy Java code which was written in Java7 initially,
+ I had to rewrite it in Java11 using the Java8 revolutionary features and removing the boilerplate code
+ 2nd challenge was in rewriting the exception handling which was improper, so I used Global
+ Exception handler and took help of springboots @Controlleradvice
+ 3rd challenge was in api integration between the various microservices, so I used springboot's
+ RestTemplate
+ 
 
 
