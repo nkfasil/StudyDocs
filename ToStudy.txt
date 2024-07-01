@@ -26,7 +26,8 @@ cap, nfr microservice...
  docker deploy, arraylist vs linkedlist for copying,
  idempotent http requests, garbage details,
  request body wrt http, preventing memory leak, stackoverflow,
- , microservice load balancer
+ , microservice load balancer,
+ steps aws ec2 copilot, chatgpt
  
  
  Hi, yes, thank you for having me today. My name is Fasil and I have 5.5 years of experience as a Java

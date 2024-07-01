@@ -1,0 +1,78 @@
+class Employee {
+    Integer empId;
+    String empName;
+    Long salary;
+    String email;
+    Department department;
+    Employee(Integer empId,
+             String empName,
+             Long salary,
+             String email,
+             Department department) {
+        this.empId = empId;
+        this.empName = empName;
+        this.salary = salary;
+        this.email = email;
+        this.department = department;
+    }
+}
+
+class Department {
+    Integer deptId;
+    String departmentName;
+    Department(Integer deptId,
+               String departmentName) {
+        this.deptId = deptId;
+        this.departmentName = departmentName;
+    }
+}
+public class StreamExamples {
+    public static void main(String args[]) {
+        Department hrDept = new Department(1, "HR");
+        Department corpDept = new Department(2, "CORP");
+        Department itDept = new Department(3, "IT");
+        Department markDept = new Department(3, "MKT");
+        Map<Integer, Employee> empMap = new HashMap<>();
+        empMap.put(1, new Employee(1, "Harsh", 1000L, "Harsh@gmail.com", hrDept));
+        empMap.put(2, new Employee(2, "Harshita", 2000L, "Harshitha@gmail.com", hrDept));
+        empMap.put(3, new Employee(3, "Harshad", 1000L, "Harshad@gmail.com", hrDept));
+        empMap.put(4, new Employee(4, "Harshneeta", 4000L, "Harshneeta@gmail.com", hrDept));
+        empMap.put(5, new Employee(5, "Harshal", 2000L, "Harshal@gmail.com", hrDept));
+        empMap.put(6, new Employee(6, "Harshali", 3000L, "Harshali@gmail.com", hrDept));
+        empMap.put(11, new Employee(11, "Harshi", 1000L, "Harsh@gmail.com", corpDept));
+        empMap.put(12, new Employee(12, "Harshita", 2000L, "Harshitha@gmail.com", corpDept));
+        empMap.put(13, new Employee(13, "Harshad", 1000L, "Harshad@gmail.com", corpDept));
+        empMap.put(14, new Employee(14, "Harshneeta", 4000L, "Harshneeta@gmail.com", itDept));
+        empMap.put(15, new Employee(15, "Harshal", 2000L, "Harshal@gmail.com", itDept));
+        empMap.put(16, new Employee(16, "Harshali", 3000L, "Harshali@gmail.com", itDept));
+    }
+Find the  highest salary paid  in each department for all departments using streams
+Expected Output:
+Highest salary in CORP is 2000
+Highest salary in IT is 4000
+ 
+ 
+---------
+hrDpt - highest salalry paid
+itDpt -highest salalry paid
+corpDpt highest salalry paid
+MktDpt highest salalry paid
+
+
+--------
+//		Map<String, Long> map = empMap
+//				.entrySet()
+//				.stream()
+//				.collect(Collectors.groupingBy(e->e.getDept()), Collectors.maxBy(Comparator.comparing(e->e.getSalary())))
+		//Map<String, Optional<Employee>> collect = empMap.entrySet().stream().collect(Collectors.groupingBy(e -> e.getValue().department.getDepartmentName(), Collectors.maxBy());
+
+		Map<Department, Optional<Employee>> collect = empMap
+				.values()
+				.stream()
+				.collect(Collectors.groupingBy(e -> e.getDepartment(), Collectors.maxBy(Comparator.comparing(e -> e.getSalary()))));
+		//System.out.println(collect);
+		System.out.println(collect);
+
+		for( Map.Entry<Department,Optional<Employee>> e:collect.entrySet()){
+			System.out.println(e.getKey().getDepartmentName()+ " "+e.getValue().get().getSalary());
+		}
