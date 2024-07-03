@@ -1,0 +1,60 @@
+ Hi, yes, thank you for having me today. My name is Fasil and I have 5.5 years of experience as a Java
+ backend developer. My most recent project was 'Agent Assist' for client 'Verizon'
+ Basically it was a simple agent facing chatbot application which the agent used to search terms based
+ on customer queries. The project was based on a Java 11 Springboot 2.7
+ microservice architecture. On the frontend, it consisted of GoogleDialogFlow for building 
+ conversational flows and Adobe AEM templates for customising the UI responses.
+ My day to day activities in my project included developing RESTful apis to build and maintain our
+ key components, implementing features in the required microservices based on the use cases, bug
+ fixing,  writing unit test cases using Junit and Mockito to ensure code quality, and also working on
+ the creation of Adobe AEM templates to assist at the frontend part.
+  1 big challenge I faced was handling the legacy Java code which was written in Java7 initially,
+ I had to rewrite it in Java11 using the Java8 revolutionary features and removing the boilerplate code
+ 2nd challenge was in rewriting the exception handling which was improper, so I used Global
+ Exception handler and took help of springboots @Controlleradvice
+ 3rd challenge was in api integration between the various microservices, so I used springboot's
+ RestTemplate
+
+
+
+Our bot was an agent facing bot, and agent used it address the customer queries
+so whenever agent faced such a task, instead of navigating through the whole website application,
+he just used our chatbot's text box to quickly search it.
+The chatbot UI captures the user input and sends it to the backend DF specified API endpoint.
+
+it sends the user input to Dialogflow’s API. This API call is necessary if Dialogflow 
+is used to handle intents and entities, and you need Dialogflow to process the input
+before any business logic is applied. The WebhookController in the Spring Boot 
+application receives the request and extracts relevant information.
+Endpoint: The Dialogflow API endpoint for sending user input is typically
+ https://dialogflow.googleapis.com/v2/projects/{project-id}/agent/sessions/{session-id}:detectIntent.
+Authentication: You need an OAuth 2.0 token to authenticate your request.
+ Obtain this token from the Google Cloud Console by creating a service account with
+ the Dialogflow API access.
+Request Body: The request payload must include the user input and session information
+
+now from this 'search term input', Dialogflow extracts the entities and the exact intent behind it
+using NLP (Natural Language Processing).
+Now, after finding this exact intent, DF has a pre defined path which triggers a series of events
+based on each intent
+If our final response needs a dynamic input, DF has a webhook fullfillment feature, 
+it's basically where we add our backend tag. The response from backend is then received at our
+back to DF and it routes it to our UI & Adobe AEM templates, which we can furthur modify 
+based on our final output
+
+Challenge:
+1 major challenge I faced was during dynamic output was properly processing the payload 
+received from Dialogflow’s webhook, which includes various fields like queryResult, intent 
+and parameters.
+I had to parse the JSON payload accurately, handling different types of requests
+(e.g., text input, rich content), and managing various scenarios based on different intent or entities.
+Solution:
+1. Use Robust JSON Parsing Libraries like Jackson for simplify JSON handling (object mapping methods,
+	streaming api and representing json data as tree of nodes.
+2. Implement data validation: 
+	Properly handle optional fields and default values, and manage the extraction of nested data.
+3. Provide Clear Error Handling:Provide meaningful error messages in responses to help diagnose problems.
+4. Ensure thorough testing with different Dialogflow intents, payloads and scenarios 
+
+
+
