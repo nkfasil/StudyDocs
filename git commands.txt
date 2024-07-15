@@ -1,0 +1,31 @@
+for status of local changes:
+git status
+
+to download repo:
+git clone linkurl
+
+to take online updates:
+git pull
+
+to add files to git staging area:
+git add filename
+or for all files
+git add . 
+
+for commit added (green files):
+git commit -m "samplemsg"
+
+for push committed files to online repo:
+git push
+
+to remove all local changes and sync with repo:
+git reset --hard
+
+to remove file from git staging (green) area:
+git restore --staged filenamewithpath
+
+to untrack file from git staging (red) area:
+git rm --cached filenamewithpath
+
+to do above in folder wise:
+$ git rm -r --cached Java\ 8\ Features/bin/

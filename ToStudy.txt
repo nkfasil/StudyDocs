@@ -13,6 +13,8 @@ Apache kafka, java in use/java techie springboot program - consumer, consumer gr
  partition
 spring reactive web flux basics
 microservice design patterns
+micronaut
+reactive programming using reactor
 
 Integration testing and Deployment pipelines like Kubernates/Docker
 Code quality tools like Sonarqubes
